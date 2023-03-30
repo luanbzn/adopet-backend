@@ -263,3 +263,6 @@ pyrightconfig.json
 
 data
 .vscode
+# Ignore dynaconf secret files
+.secrets.*
+settings.toml
