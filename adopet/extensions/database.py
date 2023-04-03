@@ -8,8 +8,8 @@ def init_app(app):
     db.init_app(app)
 
 
-class Caretaker(db.Model):
-    __tablename__ = 'caretaker'
+class Tutor(db.Model):
+    __tablename__ = 'tutor'
 
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     name = db.Column(db.String, nullable=False)
@@ -49,6 +49,7 @@ class Caretaker(db.Model):
             'photo':self.photo,
             'created_at':self.created_at.strftime('%Y-%m-%d %H:%M:%S'),
             'updated_at':self.updated_at.strftime('%Y-%m-%d %H:%M:%S'),
-            'deleted_at':self.deleted_at.strftime('%Y-%m-%d %H:%M:%S')
+            'deleted_at': (self.deleted_at.strftime('%Y-%m-%d %H:%M:%S') if not 
+                           self.deleted_at is None else self.deleted_at)
         } 
 

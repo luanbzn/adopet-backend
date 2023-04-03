@@ -8,10 +8,12 @@ Desenvolvimento de API para o frontend disponível em [Figma](https://www.figma.
 - Flask
 - Docker
     - Postgres
-    - Pgadmin
+    - PGAdmin
 
 ### Instruções para instalação
 
 ### Documentação
+
+Disponível em [http://localhost:5000/api/v1/](http://localhost:5000/api/v1/)
 
 ### Testes
